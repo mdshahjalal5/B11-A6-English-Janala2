@@ -1,93 +1,72 @@
 # B11-A6-English-Janala2
 
 ## Project Details
+
 - **GitHub URL:** https://github.com/mdshahjalal5/B11-A6-English-Janala2
 - **Local Directory:** /run/media/sj/developer/web/L1B11/6-mi/ass/B11-A6-English-Janala
 - **Username:** sj
 - **Created On:** 16/03/2025 12:42 অপরাহ্ণ রবি GMT+6
 - **Location:** Sharifpur, Gazipur, Dhaka
 
-
-# B11-A6-English-Janala
-
-## Project Details
-- **GitHub URL:** https://github.com/mdshahjalal5/B11-A6-English-Janala
-- **Local Directory:** /run/media/sj/developer/web/L1B11/6-mi/ass/B11-A6-English-Janala
-- **Username:** sj
-- **Created On:** 16/03/2025 12:41 অপরাহ্ণ রবি GMT+6
-- **Location:** Sharifpur, Gazipur, Dhaka
-
-
-# B11-A6-English-Janala
-
-## Project Details
-- **GitHub URL:** https://github.com/mdshahjalal5/B11-A6-English-Janala
-- **Local Directory:** /run/media/sj/developer/web/L1B11/6-mi/ass/B11-A6-English-Janala
-- **Username:** sj
-- **Created On:** 15/03/2025 07:05 পূর্বাহ্ণ শনি GMT+6
-- **Location:** Sharifpur, Gazipur, Dhaka
-
-
-# B11-A6-English-Janala/
-
-## Project Details
-- **GitHub URL:** https://github.com/mdshahjalal5/B11-A6-English-Janala/
-- **Local Directory:** /run/media/sj/developer/web/L1B11/6-mi/ass/B11-A6-English-Janala
-- **Username:** sj
-- **Created On:** 15/03/2025 07:03 পূর্বাহ্ণ শনি GMT+6
-- **Location:** Sharifpur, Gazipur, Dhaka
-
-
-### WELCOME TO ASSIGNMENT-006
 # ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
 
 ## Private Repo Link : https://classroom.github.com/a/JPUEMrmw
 
- **📅 Deadline For 60 marks**: 17th March , 2025 ( 11:59 pm ⏱️)
+**📅 Deadline For 60 marks**: 17th March , 2025 ( 11:59 pm ⏱️)
 
 **📅 Deadline For 50 marks**: 19th March , 2025 ( 11:59 pm ⏱️)
 
-**📅 Deadline For 30 marks**: Any time after  19th March , 2025
+**📅 Deadline For 30 marks**: Any time after 19th March , 2025
 
 ---
-⚡ API Endpoints
----
+
+## ⚡ API Endpoints
+
 1. Get ⚡ All Levels
+
 ```bash
 https://openapi.programming-hero.com/api/levels/all
 ```
+
 2. Get ⚡ Words by Levels <br/>
-https:// openapi.programming-hero.com/api/level/{id}
+   https:// openapi.programming-hero.com/api/level/{id}
+
 ```bash
 https://openapi.programming-hero.com/api/level/5
 ```
+
 3. Get ⚡ Words Detail <br/>
-https:// openapi.programming-hero.com/api/word/{id}
+   https:// openapi.programming-hero.com/api/word/{id}
+
 ```bash
 https://openapi.programming-hero.com/api/word/5
 ```
-4. Get ⚡ All  Words <br/>
+
+4. Get ⚡ All Words <br/>
 
 ```bash
 https://openapi.programming-hero.com/api/words/all
 ```
 
-# Requirements 
+# Requirements
 
 ### Navbar
+
 - [ ] Create a navbar with a logo and brand name on the left
 - [ ] Create three buttons with icons: FAQ, Learn, and Logout
-- [ ] when clicking the FAQ button user will jump to the FAQ section 
-- [ ] when clicking the Learn button user will jump to the Vocabulary section 
+- [ ] when clicking the FAQ button user will jump to the FAQ section
+- [ ] when clicking the Learn button user will jump to the Vocabulary section
 - [ ] Navbar will be fixed at the top with a bottom border
 
 ### Banner
+
 - [ ] Create a banner with a title and paragraph along with a login form on the left as Figma
 - [ ] image on the right as Figma
 - [ ] Align elements as per the Figma design
 
 ### FAQ Section
-- [ ] Create an FAQ section containing Following  questions and answers as Figma
+
+- [ ] Create an FAQ section containing Following questions and answers as Figma
   - [ ] the difference between `var`, `let`, and `const`
   - [ ] the difference between `map()`, `forEach()`, and `filter()`
   - [ ] explain arrow functions and how they are different from regular functions
@@ -95,86 +74,111 @@ https://openapi.programming-hero.com/api/words/all
   - [ ] how closures work in JavaScript
 
 ### Footer
+
 - [ ] Create a footer that includes the logo and social icons as per Figma
 - [ ] redirect users to his social profiles in a new Tab when clicking on social icons
 
 ### Vocabulary Section
+
 - [ ] Show a center-aligned heading as Figma
+
 ---
+
 - [ ] Create dynamically generated buttons from **API-01** for each lesson
 - [ ] Lesson Buttons will be displayed on page load
+
 ---
+
 - [ ] Show a default text that will be displayed in the Vocabulary section initially
-- [ ] on Clicking a Specific Lesson Button  Load All the words from  **API-02** 
+- [ ] on Clicking a Specific Lesson Button Load All the words from **API-02**
 - [ ] Display all words for a selected lesson in a card format, showing:
   - [ ] Word
   - [ ] Word meaning & pronunciation
   - [ ] Two buttons with relevant icons as per Figma
----
-- [ ] Show ***No Word Found** message  if no words exist for a lesson
----
-- [ ] Create functionality to highlight the active lesson button
+
 ---
 
+- [ ] Show **\*No Word Found** message if no words exist for a lesson
+
+---
+
+- [ ] Create functionality to highlight the active lesson button
+
+---
 
 ### Vocabulary Details
+
 - [ ] Create functionality to open a modal when clicking the details icon
 - [ ] Data will be load from **API-03**
-- [ ] modal will  displays:
+- [ ] modal will displays:
   - [ ] Word with pronunciation
   - [ ] Example sentence
   - [ ] Synonyms
   - [ ] A "Complete Learning" button to close the modal
 
-
 ## Challenge Requirements
 
-### Custom Navigation & Smooth scrolling 
+### Custom Navigation & Smooth scrolling
+
 - [ ] hide everything on landing except the Banner and Footer
 - [ ] Create a functional login form:
   - [ ] Show an alert if the user does not enter a name
   - [ ] Show an alert if the password is not "123456"
-- [ ]  when the user enters a valid name and password
+- [ ] when the user enters a valid name and password
   - [ ] Show a success alert,
   - [ ] hide the Banner
-  - [ ] display the Navbar, Vocabulary Section, and FAQ Section 
+  - [ ] display the Navbar, Vocabulary Section, and FAQ Section
+
 ---
+
 - [ ] when clicking "Logout"
   - [ ] hide the Navbar, Vocabulary Section, and FAQ Section
-  - [ ]  show only the Banner and Footer
+  - [ ] show only the Banner and Footer
 - [ ] Apply smooth scrolling for FAQ & Learn buttons
 
 ### Handling Invalid Data
+
 - [ ] avoid displaying falsy values like `undefined` or `null`
 - [ ] display relevant words if no data is found
 
 ### Loading Spinner
-- [ ] Create a loading spinner that will be display when vocabulary is loading from API 
+
+- [ ] Create a loading spinner that will be display when vocabulary is loading from API
 
 ## Optional: Be a Perfectionist
 
-⚠️ Their is No Mark for Optional Requirement.  You won't get any support for any of  the optional Part. But we strongly recommend you to give a try after completing all the requirement.
+⚠️ Their is No Mark for Optional Requirement. You won't get any support for any of the optional Part. But we strongly recommend you to give a try after completing all the requirement.
 
 ---
-### Sweet Alert - https://sweetalert2.github.io/#download 
-- [ ] Explore Sweet ALert Documentation  <br/>
-integrate it with your app. replace all the basic alert with a normal alert <br/>
-Follow this [Documentation](https://sweetalert2.github.io/) 
+
+### Sweet Alert - https://sweetalert2.github.io/#download
+
+- [ ] Explore Sweet ALert Documentation <br/>
+      integrate it with your app. replace all the basic alert with a normal alert <br/>
+      Follow this [Documentation](https://sweetalert2.github.io/)
+
 ---
+
 ### Speak your Vocabularies
+
 - [ ] Create functionality for voice pronunciation of vocabulary words
 - [ ] Use below function and implement on clicking sound icon
+
 ```js
- function pronounceWord(word) {
-      const utterance = new SpeechSynthesisUtterance(word);
-      utterance.lang = 'en-EN'; // English
-      window.speechSynthesis.speak(utterance);
-    }
+function pronounceWord(word) {
+  const utterance = new SpeechSynthesisUtterance(word);
+  utterance.lang = "en-EN"; // English
+  window.speechSynthesis.speak(utterance);
+}
 ```
-For More >>  you can explore this implementation 👉  [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
+
+For More >> you can explore this implementation 👉 [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
 
 ---
-### Custom Font integration 
+
+### Custom Font integration
+
 - [ ] integrate a local Bengali font for Bangla words given in assets
 - [ ] use this font on every Bengali words
-- [ ] Search , Research , Explore  If you dont know how to do it. 
+- [ ] Search , Research , Explore If you dont know how to do it.
+
