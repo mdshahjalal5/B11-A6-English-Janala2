@@ -1,205 +1,282 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LANGUAGE WINDOW</title>
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/0a03e60066.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- sweet alert  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- daisy ui -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@5"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>LANGUAGE WINDOW</title>
-  <!-- Fontawesome -->
-  <script src="https://kit.fontawesome.com/0a03e60066.js" crossorigin="anonymous"></script>
-  <!-- daisy ui -->
-  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon" />
-</head>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
+    .active {
+      color: white;
+      background: skyblue;
+    }
+  </style>
 
-  .active {
-    color: white;
-    background: red;
-  }
-</style>
-
-<body class="mx-auto w-11/12">
-  <header class="sm:px-5 mt-10">
-    <nav class="flex justify-between border-b-2 pb-4 border-gray-300 idden">
-      <div class="flex gap-2 items-center">
-        <h2 class="font-semibold">LANGUAGE</h2>
-        <img src="assets/logo.png" alt="" />
-        <h2 class="font-semibold">DORPON</h2>
+  <body class="mx-auto w-11/12">
+    <header class="sm:px-5 mt-10">
+      <div id="nav" class="hidden">
+        <nav class="sm:flex justify-between border-b-2 pb-4 border-gray-300">
+          <div class="flex gap-2 items-center">
+            <h2 class="font-semibold">LANGUAGE</h2>
+            <img src="assets/logo.png" alt="" />
+            <h2 class="font-semibold">DORPON</h2>
+          </div>
+          <div class="mt-3">
+            <a href="#faq">
+              <button class="btn btn-outline btn-info">FAQ</button>
+            </a>
+            <a href="#learn">
+              <button class="btn btn-outline btn-info">LEARN</button>
+            </a>
+            <a href="#">
+              <button id="logout" class="btn btn-outline btn-info">
+                LOGOUT
+              </button>
+            </a>
+          </div>
+        </nav>
       </div>
-      <div>
-        <a href="#faq">
-          <button class="btn btn-outline btn-info">FAQ</button>
-        </a>
-        <a href="#learn">
-          <button class="btn btn-outline btn-info">LEARN</button>
-        </a>
-        <a href="#">
-          <button class="btn btn-outline btn-info">LOGOUT</button>
-        </a>
+      <!-- banner -->
+
+      <div
+        id="banner"
+        class="lg:flex borde items-center flex-row-reverse justify-between mt-5 xl:px-8 min-h-[90vh] gap-5"
+      >
+        <div
+          class="text-center flex items-center justify-center xl:justify-around"
+        >
+          <img
+            src="assets/sj4.jpg"
+            alt=""
+            class="max-w-xl rounded-2xl pacity-85 p-2 h-[400px] lg:h-[60vh]"
+          />
+        </div>
+
+        <div class="xl:space-y-5 space-y-3">
+          <h2 class="text-2xl xl:text-5xl font-semibold">
+            <span class="text-sky-500">Language</span> is Easy!!
+          </h2>
+          <p class="max-w-4xl xl:text-2xl">
+            আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
+            আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
+            অন্য একটি Level এ
+          </p>
+
+          <fieldset class="fieldset">
+            <input
+              type="text"
+              id="input_name"
+              class="input input-info"
+              placeholder="Type your name"
+            />
+            <input
+              type="text"
+              id="input_password"
+              class="input input-info"
+              placeholder="Password"
+              value="123456"
+            />
+            <button
+              id="start_btn"
+              class="btn btn-outline btn-info mt-4 max-w-[320px]"
+            >
+              Get Started
+            </button>
+          </fieldset>
+        </div>
       </div>
-    </nav>
-    <!-- banner -->
-
-    <div class="flex items-center x:items-start flex-row-reverse justify-between mt-5 xl:px-8 min-h-[90h]">
-      <div class="text-center lg:text-left">
-        <img src="assets/hero-student.png" alt="" />
-      </div>
-
-      <div class="xl:space-y-5 space-y-3">
-        <h2 class="text-2xl xl:text-4xl font-semibold">
-          <span class="text-sky-500">Language</span> is Easy!!
-        </h2>
-        <p class="max-w-3xl xl:text-xl">
-          আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা
-          আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে
-          অন্য একটি Level এ
-        </p>
-
-        <fieldset class="fieldset">
-          <input type="email" class="input input-info" placeholder="Type your name" />
-          <input type="password" class="input input-info" placeholder="Password" />
-          <button class="btn btn-outline btn-info mt-4 max-w-[320px]">
-            Get Started
-          </button>
-        </fieldset>
-      </div>
-    </div>
-  </header>
-  <main class="sm:p-5">
-    <section id="learn" class="mt-22 order idden">
-      <div class=" mx-auto flex flex-col items-center">
-
-        <h2 class="text-2xl xl:text-4xl font-semibold uppercase">
-          <span class="text-sky-500">Let's</span> Learn Vocabularies
-        </h2>
-        <div id="lessons_btn" class="flex gap-3 mt-7"></div>
-      </div>
-      <div id="video_container"
-        class="space-y-1 mt-7 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-5 in-h-[70vh]">
-        <div class="flex justify-center">
-          <div
-            class="border p-4 rounded-xl text-center space-y-2 bg-gray-100 shadow-xl border-orange-500 max-w-2xl grow py-7">
-
-            <p class="text-xs text-gray-400">
-              আপনি এখনো কোন Lesson Select করেন ন
-            </p>
-            <p>একটি Lesson Select করুন।</p>
-
+    </header>
+    <main class="sm:p-5">
+      <section id="learn" class="mt-22 order hidden">
+        <div class="mx-auto flex flex-col items-center">
+          <h2 class="text-xl sm:text-2xl xl:text-4xl font-semibold uppercase">
+            <span class="text-sky-500">Let's</span> Learn Vocabularies
+          </h2>
+          <div id="lessons_btn" class="flex flex-wrap gap-3 mt-7"></div>
+        </div>
+        <div
+          id="video_container"
+          class="space-y-1 mt-7 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-x-5 in-h-[70vh]"
+        >
+          <div class="flex justify-center">
+            <div
+              class="border p-4 rounded-xl text-center space-y-2 bg-gray-100 shadow-xl border-orange-500 max-w-2xl grow py-7"
+            >
+              <p class="text-xs text-gray-400">
+                আপনি এখনো কোন Lesson Select করেন ন
+              </p>
+              <p>একটি Lesson Select করুন।</p>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
-    <!-- faq section -->
-    <section id="faq" class="mt-16">
-      <h2 class="text-4xl xl:text-4xl font-semibold text-center">
-        <span class="text-sky-500">Frequently </span>Asked Questions
-      </h2>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300 mt-7">
-        <input type="radio" name="my-accordion-3" checked="checked" />
-        <div class="collapse-title font-semibold">
-          What's the difference between var, let, and const?
+      </section>
+      <!-- faq section -->
+      <section id="faq" class="mt-28 hidden">
+        <h2 class="sm:text-4xl text-xl font-semibold text-center">
+          <span class="text-sky-500">Frequently </span>Asked Questions
+        </h2>
+        <div
+          class="collapse collapse-plus bg-base-100 border border-base-300 mt-7"
+        >
+          <input type="radio" name="my-accordion-3" checked="checked" />
+          <div class="collapse-title font-semibold">
+            What's the difference between var, let, and const?
+          </div>
+          <div class="collapse-content text-sm">
+            var is function-scoped, can be redeclared and updated, and is
+            hoisted with undefined. let is block-scoped, cannot be redeclared
+            but can be updated, and is not hoisted with undefined. const is also
+            block-scoped, must be initialized, and cannot be updated or
+            redeclared.
+          </div>
         </div>
-        <div class="collapse-content text-sm">
-          Click the "Sign Up" button in the top right corner and follow the
-          registration process.
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold">
+            What's the difference between map(), forEach(), and filter()?
+          </div>
+          <div class="collapse-content text-sm">
+            map() creates a new array by applying a function to each element of
+            the original array, returning the transformed values. forEach()
+            executes a provided function on each element of the array but does
+            not return a new array (it's used for side effects). filter()
+            creates a new array with elements that pass the provided test
+            function, returning only the elements that meet the condition.
+          </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold">
-          What's the difference between map(), forEach(), and filter()?
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold capitalize">
+            Explain arrow functions and how they are different from regular
+            functions
+          </div>
+          <div class="collapse-content text-sm">
+            Arrow functions are a more concise way to write functions in
+            JavaScript. They are defined using the => syntax, like this:
+          </div>
         </div>
-        <div class="collapse-content text-sm">
-          Click on "Forgot Password" on the login page and follow the
-          instructions sent to your email.
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold capitalize">
+            how closures work in JavaScript?
+          </div>
+          <div class="collapse-content text-sm">
+            In JavaScript, a closure is created when a function is defined
+            inside another function, allowing the inner function to access the
+            outer function's variables, even after the outer function has
+            finished executing. This happens because the inner function retains
+            a reference to the outer function's variables,
+          </div>
         </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold capitalize">
-          Explain arrow functions and how they are different from regular
-          functions
+        <div class="collapse collapse-plus bg-base-100 border border-base-300">
+          <input type="radio" name="my-accordion-3" />
+          <div class="collapse-title font-semibold capitalize">
+            how JavaScript Promises work?
+          </div>
+          <div class="collapse-content text-sm">
+            A JavaScript Promise is an object that represents the eventual
+            completion or failure of an asynchronous operation. It allows you to
+            handle asynchronous code more effectively by providing a way to
+            attach callbacks to handle success or failure outcomes. A Promise
+            has three states:
+          </div>
         </div>
-        <div class="collapse-content text-sm">
-          Go to "My Account" settings and select "Edit Profile" to make
-          changes.
-        </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold capitalize">
-          how closures work in JavaScript?
-        </div>
-        <div class="collapse-content text-sm">
-          Go to "My Account" settings and select "Edit Profile" to make
-          changes.
-        </div>
-      </div>
-      <div class="collapse collapse-plus bg-base-100 border border-base-300">
-        <input type="radio" name="my-accordion-3" />
-        <div class="collapse-title font-semibold capitalize">
-          how JavaScript Promises work?
-        </div>
-        <div class="collapse-content text-sm">
-          Go to "My Account" settings and select "Edit Profile" to make
-          changes.
-        </div>
-      </div>
-    </section>
+      </section>
       <!-- modal section -->
-        <dialog id="my_modal" class="modal">
-    <div class="modal-box">
-      <div id="modal_content">
-        <h2>Eager <span>( <i>sp: igar</i> )</span></h2>
-      </div>
-      <div class="modal-action justify-start">
-        <form method="dialog" class="">
-          <!-- if there is a button in form, it will close the modal -->
-<button class="btn btn-primary max-w-[350px]">Lesson Completed</button>
-        </form>
-      </div>
-    </div>
-  </dialog>
-
-  </main>
-  <footer class="mt-18 border-t-2 pt-2 border-gray-200 flex justify-between sm:px-5 items-center mb-3">
-    <div class="space-y-2">
-      <div class="flex items-center gap-2">
-        <h2 class="font-semibold">LANGUAGE</h2>
-        <img src="assets/logo.png" alt="" />
-        <h2 class="font-semibold">DORPON</h2>
-      </div>
-      <h2 class="text-xl">ইংরেজি শিখুন সহজে</h2>
-      <p class="text-xs text-gray-500">
-        Providing ED-Tech Applications since 2025
-      </p>
-    </div>
-    <div class="space-y-2">
-      <p class="uppercase text-xs">Follow us</p>
-      <div class="flex gap-3">
-        <p class="text-xs w-4 h-4 p-1 bg-gray-100 rounded-full border flex justify-center items-center">
-          <a href="#" target="_blank">F</a>
-        <p class="text-xs w-4 h-4 p-1 bg-gray-100 rounded-full border flex justify-center items-center">
-          F
-        </p>
-        <p class="text-xs w-4 h-4 p-1 bg-gray-100 rounded-full border flex justify-center items-center">
-          F
-        </p>
-        <p class="text-xs w-4 h-4 p-1 bg-gray-100 rounded-full border flex justify-center items-center">
-          F
-        </p>
+      <dialog id="my_modal" class="modal">
+        <div class="modal-box">
+          <div id="modal_content">
+            <h2>
+              Eager <span>( <i>sp: igar</i> )</span>
+            </h2>
+          </div>
+          <div class="modal-action justify-start">
+            <form method="dialog" class="">
+              <!-- if there is a button in form, it will close the modal -->
+              <button class="btn btn-primary max-w-[350px]">
+                Lesson Completed
+              </button>
+            </form>
+          </div>
+        </div>
+      </dialog>
+    </main>
+    <footer
+      class="mt-18 border-t-2 pt-2 border-gray-200 sm:flex justify-between sm:px-5 items-center mb-3"
+    >
+      <div class="space-y-2 grow">
+        <div class="flex items-center gap-2">
+          <h2 class="font-semibold">LANGUAGE</h2>
+          <img src="assets/logo.png" alt="" />
+          <h2 class="font-semibold">DORPON</h2>
+        </div>
+        <h2 class="text-xl">ইংরেজি শিখুন সহজে</h2>
+        <p class="text-xs text-gray-500">
+          Providing ED-Tech Applications since 2025
         </p>
       </div>
-    </div>
-  </footer>
-  <script src="JS/utility.js"></script>
-  <script src="JS/index.js"></script>
-</body>
-
+      <div class="space-y-2 mt-4 sm:m-auto">
+        <p class="uppercase text-xs">Follow us</p>
+        <div class="flex gap-3">
+          <p
+            class="text-xl w-4 h-4 bg-gray-100 rounded-full flex justify-center items-center"
+          >
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+          </p>
+          <p
+            class="text-xl w-4 h-4 bg-gray-100 rounded-full flex justify-center items-center"
+          >
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+          </p>
+          <p
+            class="text-xl w-4 h-4 bg-gray-100 rounded-full flex justify-center items-center"
+          >
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </p>
+          <p
+            class="text-xl w-4 h-4 bg-gray-100 rounded-full flex justify-center items-center"
+          >
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+          </p>
+          <p
+            class="text-xl w-4 h-4 bg-gray-100 rounded-full flex justify-center items-center"
+          >
+            <a href="#" target="_blank">
+              <i class="fa-brands fa-telegram"></i>
+            </a>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <script src="JS/utility.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
 </html>

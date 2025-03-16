@@ -1,3 +1,46 @@
+document.getElementById("input_password").value = "123456";
+document.getElementById("logout").addEventListener("click", () => {
+  Swal.fire("Hey Buddy!", "You have logged out", "success");
+
+  const vocabulary = document.getElementById("learn");
+  vocabulary.classList.add("hidden");
+  const navbar = document.getElementById("nav");
+  navbar.classList.add("hidden");
+  const faq = document.getElementById("faq");
+  faq.classList.add("hidden");
+  const banner = document.getElementById("banner");
+  if (banner) {
+    banner.classList.add("min-h-[90vh]");
+    banner.style.display = "flex";
+  }
+});
+document.getElementById("start_btn").addEventListener("click", (e) => {
+  const userName = getValue("input_name");
+
+  const password = getValue("input_password");
+
+  if (!userName) {
+    Swal.fire("oops!", "Please type your name", "error");
+    return;
+  }
+  if (userName && password == "123456") {
+    Swal.fire("Awesome!", "You have successfully logged in", "success");
+
+    const hiddens = Array.from(document.getElementsByClassName("hidden"));
+
+    const banner = document.querySelector(".min-h-\\[90vh\\]");
+    if (banner) {
+      banner.classList.remove("min-h-[90vh]");
+      banner.style.display = "none";
+    }
+
+    for (let i = 0; i < hiddens.length; i++) {
+      hiddens[i].classList.remove("hidden");
+    }
+  } else {
+    Swal.fire("Oops!", "Password Invalid", "error");
+  }
+});
 const displayLessons = async () => {
   const { data: datas } = await fetchData(
     "https://openapi.programming-hero.com/api/levels/all",
